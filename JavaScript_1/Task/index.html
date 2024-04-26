@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Запити даних</title>
+    <script>
+        function greetUser() {
+            var name = prompt("Як тебе звати?");
+            alert("Привіт, " + name + "!");
+        }
+
+        function calculateAge() {
+            const currentYear = 2024;
+            var birthYear = prompt("Який твій рік народження?");
+            var age = currentYear - birthYear;
+            alert("Тобі " + age + " років.");
+        }
+
+        function calculatePerimeter() {
+            var sideLength = prompt("Введіть довжину сторони квадрата:");
+            var perimeter = 4 * sideLength;
+            alert("Периметр квадрата: " + perimeter);
+        }
+
+        function calculateCircleArea() {
+            var radius = prompt("Введіть радіус кола:");
+            var area = Math.PI * Math.pow(radius, 2);
+            alert("Площа кола: " + area.toFixed(2));
+        }
+
+        function calculateSpeed() {
+            var distance = prompt("Введіть відстань між містами в кілометрах:");
+            var time = prompt("За скільки годин ви хочете дістатися?");
+            var speed = distance / time;
+            alert("Вам потрібно рухатися зі швидкістю " + speed.toFixed(2) + " км/год.");
+        }
+
+        function currencyConverter() {
+            const exchangeRate = 0.93; // Курс обміну долара до євро
+            var dollars = prompt("Скільки доларів ви хочете конвертувати в євро?");
+            var euros = dollars * exchangeRate;
+            alert("Це буде " + euros.toFixed(2) + " євро.");
+        }
+
+        function calculateFiles() {
+            var usbSize = prompt("Введіть обсяг флешки у ГБ:");
+            var fileSize = 820; // розмір файлу в МБ
+            var files = Math.floor((usbSize * 1024) / fileSize);
+            alert("На вашу флешку поміститься " + files + " файлів розміром 820 МБ.");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="greetUser()">Привітання</button>
+    <button onclick="calculateAge()">Обчислити вік</button>
+    <button onclick="calculatePerimeter()">Периметр квадрата</button>
+    <button onclick="calculateCircleArea()">Площа кола</button>
+    <button onclick="calculateSpeed()">Швидкість руху</button>
+    <button onclick="currencyConverter()">Конвертер валют</button>
+    <button onclick="calculateFiles()">Обчислити кількість файлів на флешці</button>
+</body>
+</html>
